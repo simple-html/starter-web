@@ -1,4 +1,5 @@
 import { routeMatch } from "@simple-html/router";
+import { html } from "lit-html";
 import { routerConfig } from "./routerConfig";
 
 export function ifUnknowRoute() {
@@ -15,8 +16,10 @@ export function ifUnknowRoute() {
       return e === true;
     }).length;
 
-  if (!mainroute && !subroutes) {
-    return "unknown route";
+  if (!mainroute && !subroutes && !routeMatch('')) {
+    return html`<section class="p-2">
+      <h1>unknown route</h1>
+    </section>`;
   } else {
     return "";
   }

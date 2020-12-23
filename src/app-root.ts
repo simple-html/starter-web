@@ -22,12 +22,12 @@ export default class extends HTMLElement {
 
   public render() {
     return html`
-      <nav class="flex bg-green-500 p-6">
+      <nav class="flex bg-indigo-500 p-6">
         ${navs("main").map((route: any) => {
           if (route.isNav) {
             return html`
               <span class="mr-6">
-                <a class="text-green-200 hover:text-white" href="${route.href}"
+                <a class="text-green-200 hover:text-white hover:underline" href="${route.href}"
                   >${route.title}</a
                 >
               </span>

@@ -6,7 +6,8 @@ import { formState } from "src/state/settingsState";
 export default class extends HTMLElement {
   public render() {
     const form = formState.getObjectStateOnly();
-    return html` <section><h1>home</h1></section>
+    return html` <section class="p-2">
+      <h1>home</h1>
       <form class="flex flex-col">
         <h1 class="m-2 text-2xl">Current State</h1>
         Login to edit (protected route)
@@ -16,6 +17,7 @@ export default class extends HTMLElement {
         <label class="p-2 border-b border-gray-300">
           Last name: ${form.lastLame || ""}
         </label>
-      </form>`;
+      </form>
+    </section>`;
   }
 }

@@ -35,7 +35,7 @@ export default class extends HTMLElement {
 
   public render() {
     return html`
-      <section>
+      <section class="p-2">
         <h1>Settings</h1>
         <br />
         Locked:<input

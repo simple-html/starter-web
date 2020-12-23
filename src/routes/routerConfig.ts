@@ -50,7 +50,7 @@ export const routerConfig = {
       subHome: {
         path: "#child/",
         href: "#child/",
-        title: "SubHome",
+        title: "Sub Home",
         fetch: () => import("./home"),
         html: html`<home-route></home-route> `,
         isNav: true,
@@ -72,7 +72,7 @@ export const routerConfig = {
       protected: {
         path: "#child/protected",
         href: "#child/protected",
-        title: "sub Protected",
+        title: "Sub Protected",
         fetch: () => import("./protected"),
         html: html` <protected-route></protected-route> `,
         isNav: true,
