@@ -2,7 +2,7 @@ import { routeMatch } from "@simple-html/router";
 import { html } from "lit-html";
 import { routerConfig } from "./routerConfig";
 
-export function ifUnknowRoute() {
+export function loadIfUnknownRoute() {
   const mainroute = Object.keys(routerConfig)
     .map((key) => routeMatch(routerConfig[key].href))
     .filter((e) => {

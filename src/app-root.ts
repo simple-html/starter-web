@@ -8,7 +8,7 @@ import {
 } from "@simple-html/router";
 import { isAuthenticted, setLogoutState } from "./routes/login";
 import "./routes/routerConfig";
-import { ifUnknowRoute } from "./routes/ifUnknowRoute";
+import { loadIfUnknownRoute } from "./routes/loadIfUnknownRoute";
 
 @customElement("app-root")
 export default class extends HTMLElement {
@@ -62,7 +62,7 @@ export default class extends HTMLElement {
       <!--  route -->
       ${routerConfig.child.load()}
       <!--  route -->
-      ${ifUnknowRoute()}
+      ${loadIfUnknownRoute()}
     `;
   }
 }
