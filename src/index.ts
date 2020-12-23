@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // load out elements
-import("./elements/app-root").then(() => {
+import("./app-root").then(() => {
     if (document.body) {
       document.body.innerHTML = "<app-root></app-root>";
     }
