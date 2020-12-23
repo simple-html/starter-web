@@ -1,0 +1,51 @@
+[
+  {
+    "absPath": "D:\\github\\starters\\starter-web\\sample\\app.js",
+    "browserPath": "./app.js",
+    "relativePath": "app.js",
+    "type": "js",
+    "webIndexed": true
+  },
+  {
+    "absPath": "D:\\github\\starters\\starter-web\\sample\\styles\\styles.22e1b14a.css",
+    "browserPath": "./styles/styles.22e1b14a.css",
+    "relativePath": "styles/styles.22e1b14a.css",
+    "type": "css",
+    "webIndexed": true
+  },
+  {
+    "absPath": "D:\\github\\starters\\starter-web\\sample\\dynamic\\src-app-root.03c58e770.js",
+    "browserPath": "./dynamic/src-app-root.03c58e770.js",
+    "relativePath": "dynamic/src-app-root.03c58e770.js",
+    "type": "js",
+    "webIndexed": false
+  },
+  {
+    "absPath": "D:\\github\\starters\\starter-web\\sample\\dynamic\\src-routes-home.1c473b9f.js",
+    "browserPath": "./dynamic/src-routes-home.1c473b9f.js",
+    "relativePath": "dynamic/src-routes-home.1c473b9f.js",
+    "type": "js",
+    "webIndexed": false
+  },
+  {
+    "absPath": "D:\\github\\starters\\starter-web\\sample\\dynamic\\src-routes-settings.154b6472.js",
+    "browserPath": "./dynamic/src-routes-settings.154b6472.js",
+    "relativePath": "dynamic/src-routes-settings.154b6472.js",
+    "type": "js",
+    "webIndexed": false
+  },
+  {
+    "absPath": "D:\\github\\starters\\starter-web\\sample\\dynamic\\src-routes-childrouter.1c2d4faf.js",
+    "browserPath": "./dynamic/src-routes-childrouter.1c2d4faf.js",
+    "relativePath": "dynamic/src-routes-childrouter.1c2d4faf.js",
+    "type": "js",
+    "webIndexed": false
+  },
+  {
+    "absPath": "D:\\github\\starters\\starter-web\\sample\\dynamic\\src-routes-protected.152f9f2e.js",
+    "browserPath": "./dynamic/src-routes-protected.152f9f2e.js",
+    "relativePath": "dynamic/src-routes-protected.152f9f2e.js",
+    "type": "js",
+    "webIndexed": false
+  }
+]

@@ -41,12 +41,14 @@ task("dev", async (ctx) => {
 task("prod", async (ctx) => {
   await rm("./cache");
   await rm("./dist");
+  await rm("./sample");
 
   // start bundle
   await fusebox({
     target: "browser",
     entry: "./src/index.ts",
     webIndex: { publicPath: "./", template: "./src/index.html" },
+    sourceMap: false,
     plugins: [
       pluginTypeChecker({
         name: "dev build",
@@ -64,6 +66,6 @@ task("prod", async (ctx) => {
     ],
   }).runProd({
     uglify: true,
-    bundles: { distRoot: "dist/", app: "app.js" },
+    bundles: { distRoot: "sample/", app: "app.js" },
   });
 });
