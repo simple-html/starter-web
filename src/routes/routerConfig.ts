@@ -1,6 +1,6 @@
-import { init, routeMatchAsync } from "@simple-html/router";
+import { startRouter, routeMatchAsync } from "@simple-html/router";
 import { html } from "lit-html";
-init();
+startRouter();
 
 export const routerConfig = {
   home: {
