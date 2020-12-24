@@ -2,8 +2,7 @@ import { html } from "lit-html";
 import { customElement } from "@simple-html/core";
 import { navs, routerConfig } from "./routes/routerConfig";
 import {
-  subscribeHashEvent,
-  unSubscribeHashEvent,
+  connectHashChanges,
   gotoURL,
 } from "@simple-html/router";
 import { isAuthenticted, setLogoutState } from "./routes/login";
@@ -13,12 +12,10 @@ import { loadIfUnknownRoute } from "./routes/loadIfUnknownRoute";
 @customElement("app-root")
 export default class extends HTMLElement {
   connectedCallback() {
-    subscribeHashEvent(this, this.render);
+    connectHashChanges(this, this.render);
   }
 
-  disconnectedCallback() {
-    unSubscribeHashEvent(this);
-  }
+
 
   public render() {
     return html`

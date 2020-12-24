@@ -7,7 +7,7 @@ import { formState } from "src/state/settingsState";
 @customElement("login-route")
 export default class extends HTMLElement {
   private authToggelBtn() {
-    const [, formSet] = formState.getObject();
+    const [, formSet] = formState.getStateObject();
     formSet({ loggedin: isAuthenticted() ? false : true });
 
     // lets go to our login area
@@ -33,12 +33,12 @@ export default class extends HTMLElement {
 
 
 export function isAuthenticted() {
-  const form = formState.getObjectStateOnly();
+  const form = formState.getObjectValue();
   return form.loggedin;
 }
 
 export function setLogoutState() {
-  const [, formSet] = formState.getObject();
+  const [, formSet] = formState.getStateObject();
   formSet({ loggedin: false });
   gotoURL(""); // goto home is a good place
 }

@@ -1,21 +1,12 @@
 import { html } from "lit-html";
 import { customElement } from "@simple-html/core";
 import { navs, routerConfig } from "./routerConfig";
-import {
-  subscribeHashEvent,
-  unSubscribeHashEvent,
-} from "@simple-html/router";
-
-
+import { connectHashChanges } from "@simple-html/router";
 
 @customElement("childrouter-route")
 export default class extends HTMLElement {
   connectedCallback() {
-    subscribeHashEvent(this, this.render);
-  }
-
-  disconnectedCallback() {
-    unSubscribeHashEvent(this);
+    connectHashChanges(this, this.render);
   }
 
   public render() {
@@ -25,7 +16,9 @@ export default class extends HTMLElement {
           if (route.isNav) {
             return html`
               <span class="mr-6">
-                <a class="text-green-200 hover:text-white hover:underline" href="${route.href}"
+                <a
+                  class="text-green-200 hover:text-white hover:underline"
+                  href="${route.href}"
                   >${route.title}</a
                 >
               </span>
@@ -39,6 +32,6 @@ export default class extends HTMLElement {
       ${routerConfig.child.children.subHome.load()}
       ${routerConfig.child.children.subSettings.load()}
       ${routerConfig.child.children.protected.load()}
-     `;
+    `;
   }
 }
