@@ -19,22 +19,12 @@ export default class extends HTMLElement {
         <h1>Welcome to the inner circle :-)</h1>
 
         <form class="flex flex-col">
-          <h1 class="m-2 text-2xl">Form element</h1>
-          Just type in something you want on home:
           <label class="p-2">
-            First Name:
+            Username:
             <input
               class="border border-gray-300 p-2"
-              .value=${form.firstName || ""}
-              @input=${(e: any) => setForm({ firstName: e.target.value })}
-            />
-          </label>
-          <label class="p-2">
-            Last name:
-            <input
-              class="border border-gray-300 p-2"
-              .value=${form.lastLame || ""}
-              @input=${(e: any) => setForm({ lastLame: e.target.value })}
+              .value=${form.username || ""}
+              @input=${(e: any) => setForm({ username: e.target.value })}
             />
           </label>
         </form>

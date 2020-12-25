@@ -12,11 +12,9 @@ export default class extends HTMLElement {
         <h1 class="m-2 text-2xl">Current State</h1>
         Login to edit (protected route)
         <label class="p-2 border-b border-gray-300">
-          First Name: ${form.firstName || ""}
+          Username: ${form.username || ""}
         </label>
-        <label class="p-2 border-b border-gray-300">
-          Last name: ${form.lastLame || ""}
-        </label>
+
       </form>
     </section>`;
   }

@@ -1,30 +1,30 @@
 import { html } from "lit-html";
 import { customElement } from "@simple-html/core";
 import { navs, routerConfig } from "./routes/routerConfig";
-import {
-  connectHashChanges,
-  gotoURL,
-} from "@simple-html/router";
+import { connectHashChanges, gotoURL } from "@simple-html/router";
 import { isAuthenticted, setLogoutState } from "./routes/login";
 import "./routes/routerConfig";
 import { loadIfUnknownRoute } from "./routes/loadIfUnknownRoute";
+import { formState } from "./state/settingsState";
 
 @customElement("app-root")
 export default class extends HTMLElement {
   connectedCallback() {
     connectHashChanges(this, this.render);
+    formState.connectStateChanges(this, this.render);
   }
 
-
-
   public render() {
+    const form = formState.getObjectValue();
     return html`
       <nav class="flex bg-indigo-500 p-6">
         ${navs("main").map((route: any) => {
           if (route.isNav) {
             return html`
               <span class="mr-6">
-                <a class="text-green-200 hover:text-white hover:underline" href="${route.href}"
+                <a
+                  class="text-green-200 hover:text-white hover:underline"
+                  href="${route.href}"
                   >${route.title}</a
                 >
               </span>
@@ -46,6 +46,8 @@ export default class extends HTMLElement {
             }}
           >
             ${isAuthenticted() ? "Logout" : "Login"}
+            <br />
+            ${isAuthenticted() ? form.username || "not set" : "NA"}
           </span>
         </span>
       </nav>

@@ -2,10 +2,15 @@ import { html } from "lit-html";
 import { customElement } from "@simple-html/core";
 import { gotoURL } from "@simple-html/router/src";
 import { routerConfig } from "./routerConfig";
-import { formState } from "src/state/settingsState";
+import { formState } from "../state/settingsState";
 
 @customElement("login-route")
 export default class extends HTMLElement {
+  connectedCallback() {
+    // connect to changes and call render
+    formState.connectStateChanges(this, this.render);
+  }
+
   private authToggelBtn() {
     const [, formSet] = formState.getStateObject();
     formSet({ loggedin: isAuthenticted() ? false : true });
@@ -15,6 +20,7 @@ export default class extends HTMLElement {
   }
 
   public render() {
+    
     return html`
       <section class="p-2">
         <h1>Auth component</h1>
@@ -30,7 +36,6 @@ export default class extends HTMLElement {
 }
 
 // some dummy funtions to simulate logout
-
 
 export function isAuthenticted() {
   const form = formState.getObjectValue();
