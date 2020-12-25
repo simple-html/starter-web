@@ -19,8 +19,9 @@ task("dev", async (ctx) => {
       publicPath: "./",
       template: "./src/index.html",
     },
-    hmr: { plugin: "./fuseboxHmrPlugin.ts" },
+    hmr: true,
     devServer: true,
+    logging: { level: "verbose" },
     plugins: [
       pluginTypeChecker({
         name: "dev build",
