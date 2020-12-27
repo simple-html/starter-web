@@ -21,7 +21,7 @@ task("dev", async (ctx) => {
     },
     hmr: true,
     devServer: true,
-    logging: { level: "verbose" },
+    logging: false, // { level: "verbose" },
     plugins: [
       pluginTypeChecker({
         name: "dev build",
