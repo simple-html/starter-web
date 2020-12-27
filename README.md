@@ -17,4 +17,3 @@ Simple starter for simple-html with tailwind using fusebox bundler
 
 #### production run sample
 
-* https://simple-html.github.io/starter-web/sample/index
