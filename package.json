@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node fusebox"
+    "start": "node fusebox dev",
+    "dev": "node fusebox dev",
+    "build": "node fusebox build"
   },
   "repository": {
     "type": "git",

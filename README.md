@@ -8,12 +8,10 @@ Simple starter for simple-html with tailwind using fusebox bundler
 
 ### run development mode with dev server
 
-- `npm start dev`
+- `npm start`
 
 ### build production
 
-- `npm start prod`
+- `npm run build`
 
-
-#### production run sample
 

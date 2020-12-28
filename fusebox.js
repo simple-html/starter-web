@@ -39,10 +39,10 @@ task("dev", async (ctx) => {
   }).runDev();
 });
 
-task("prod", async (ctx) => {
+task("build", async (ctx) => {
   await rm("./cache");
   await rm("./dist");
-  await rm("./sample");
+ 
 
   // start bundle
   await fusebox({
@@ -67,6 +67,6 @@ task("prod", async (ctx) => {
     ],
   }).runProd({
     uglify: true,
-    bundles: { distRoot: "sample/", app: "app.js" },
+    bundles: { distRoot: "dist/", app: "app.js" },
   });
 });
