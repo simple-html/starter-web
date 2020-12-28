@@ -42,6 +42,7 @@ task("dev", async (ctx) => {
 task("build", async (ctx) => {
   await rm("./cache");
   await rm("./dist");
+  await rm("./build");
  
 
   // start bundle
@@ -67,6 +68,6 @@ task("build", async (ctx) => {
     ],
   }).runProd({
     uglify: true,
-    bundles: { distRoot: "dist/", app: "app.js" },
+    bundles: { distRoot: "build/", app: "app.js" },
   });
 });
