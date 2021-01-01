@@ -18,14 +18,14 @@
   },
   "homepage": "https://github.com/simple-html/starter-web#readme",
   "dependencies": {
-    "@simple-html/core": "3.0.0-next5",
-    "@simple-html/router": "3.0.0-next5",
+    "@simple-html/core": "3.0.0-next6",
+    "@simple-html/router": "3.0.0-next6",
     "custom-elements-hmr-polyfill": "^1.0.3",
     "fuse-box": "^4.0.0",
     "fuse-box-typechecker": "^3.0.1",
     "lit-html": "^1.3.0",
     "minify-html-literals": "^1.3.2",
-    "postcss": "^8.2.1",
+    "postcss": "^8.2.2",
     "tailwindcss": "^2.0.2",
     "typescript": "^4.1.3"
   }
