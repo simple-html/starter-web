@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/simple-html/starter-web#readme",
   "dependencies": {
-    "@simple-html/core": "3.0.0-next6",
-    "@simple-html/router": "3.0.0-next6",
+    "@simple-html/core": "3.0.0",
+    "@simple-html/router": "3.0.0",
     "custom-elements-hmr-polyfill": "^1.0.3",
     "fuse-box": "^4.0.0",
     "fuse-box-typechecker": "^3.0.1",
