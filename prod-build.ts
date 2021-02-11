@@ -4,6 +4,7 @@ import {
   client,
   postcssPlugin,
   single,
+  minifyHTMLLiteralsPlugin,
 } from "esbuild-helpers";
 
 clearFolders("dist");
@@ -24,7 +25,7 @@ single(
       postcssPlugin([require("tailwindcss")("./tailwindcss.prod.config.js")]),
     ],
     logLevel: "error",
-    incremental: true,
+    incremental: false,
   }
 );
 
@@ -40,6 +41,7 @@ client(
     },
     entryPoints: ["./src/index.ts"],
     outfile: "./dist/index.js",
+    plugins: [minifyHTMLLiteralsPlugin()],
     minify: true,
     bundle: true,
     platform: "browser",
