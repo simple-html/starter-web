@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node fusebox dev",
-    "dev": "node fusebox dev",
-    "build": "node fusebox build"
+    "start": "ts-node dev-run",
+    "dev": "ts-node dev-run",
+    "build": "ts-node prod-build"
   },
   "repository": {
     "type": "git",
@@ -17,16 +17,17 @@
     "url": "https://github.com/simple-html/starter-web/issues"
   },
   "homepage": "https://github.com/simple-html/starter-web#readme",
-  "dependencies": {
-    "@simple-html/core": "3.0.0",
-    "@simple-html/router": "3.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@simple-html/core": "3.2.2",
+    "@simple-html/router": "3.2.2",
     "custom-elements-hmr-polyfill": "^1.0.3",
-    "fuse-box": "^4.0.0",
-    "fuse-box-typechecker": "^3.0.1",
+    "esbuild-helpers": "0.0.1-next.11",
     "lit-html": "^1.3.0",
     "minify-html-literals": "^1.3.2",
-    "postcss": "^8.2.2",
-    "tailwindcss": "^2.0.2",
-    "typescript": "^4.1.3"
+    "postcss": "^8.2.6",
+    "tailwindcss": "^2.0.3",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
   }
 }

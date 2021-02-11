@@ -5,6 +5,6 @@ import { customElement } from "@simple-html/core";
 export default class extends HTMLElement {
   public render() {
     return html`
-      <span class="inline-block p-2 m-2 bg-indigo-500 text-white">hello world</span> `;
+      <span class="inline-block p-2 m-2 bg-indigo-800 text-white">hello world</span> `;
   }
 }
