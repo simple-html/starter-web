@@ -13,7 +13,7 @@ clearFolders("dist");
  * css so we dont need to wait for postcss unless we change css..
  */
 single(
-  { watch: "./src/**/*.css" },
+  null,
   {
     color: true,
     define: {
@@ -33,11 +33,11 @@ single(
  * client bundle
  */
 client(
-  { watch: "./src/**/*.ts" },
+  null,
   {
     color: true,
     define: {
-      DEVELOPMENT: false,
+      DEVELOPMENT: "false",
     },
     entryPoints: ["./src/index.ts"],
     outfile: "./dist/index.js",
@@ -55,6 +55,8 @@ client(
  * index file for project
  */
 addDefaultIndex({
+  publicFolders: [],
+  hbr: false,
   distFolder: "dist",
   entry: "./index.js",
   indexTemplate: /*html*/ `<!DOCTYPE html>

@@ -35,7 +35,7 @@ client(
   {
     color: true,
     define: {
-      DEVELOPMENT: true,
+      DEVELOPMENT: "true",
     },
     entryPoints: ["./src/index.ts"],
     outfile: "./dist/index.js",
@@ -52,6 +52,7 @@ client(
  * index file for project
  */
 addDefaultIndex({
+  publicFolders: [],
   distFolder: "dist",
   entry: "./index.js",
   hbr: true,
@@ -79,7 +80,7 @@ addDefaultIndex({
 const checker_client = TypeChecker({
   basePath: `./src`,
   name: 'client type check',
-  tsConfig:'tsconfig.json'
+  tsConfig: 'tsconfig.json'
 });
 
 checker_client.printSettings();
